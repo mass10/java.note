@@ -1,5 +1,3 @@
-package jp.tokyo.mar3.util;
-
 import java.util.Calendar;
 
 public final class Stopwatch {
@@ -18,38 +16,22 @@ public final class Stopwatch {
 	@Override
 	public String toString() {
 
-		long since = this._start;
-		long now = _time();
+		long milliseconds = _time() - this._start;
 
-		long milliseconds = now - since;
-		long seconds = 0;
-		long minutes = 0;
-		long hours = 0;
-
-		while(1000 <= milliseconds) {
-			seconds++;
-			milliseconds -= 1000;
-		}
-
-		while(60 <= seconds) {
-			minutes++;
-			seconds -= 60;
-		}
-
-		while(60 <= minutes) {
-			minutes -= 60;
-			hours++;
-		}
-
-		return String.format("%02d:%02d:%02d.%03d", hours, minutes, seconds, milliseconds);
+		return toString(milliseconds);
 	}
 
-	public static void main(String[] args) throws Exception {
+	private static String toString(long milliseconds) {
 
-		final Stopwatch watch = new Stopwatch();
+		long seconds = milliseconds / 1000;
+		milliseconds = milliseconds % 1000;
 
-		Thread.sleep(12);
+		long minutes = seconds / 60;
+		seconds = seconds % 60;
 
-		System.out.println(watch);
+		long hours = minutes / 60;
+		minutes = minutes % 60;
+
+		return String.format("%02d:%02d:%02d.%03d", hours, minutes, seconds, milliseconds);
 	}
 }
