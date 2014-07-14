@@ -1,4 +1,3 @@
-import java.util.Calendar;
 
 public final class Stopwatch {
 
@@ -10,7 +9,7 @@ public final class Stopwatch {
 
 	private static final long _time() {
 
-		return Calendar.getInstance().getTimeInMillis();
+		return System.currentTimeMillis();
 	}
 
 	@Override
