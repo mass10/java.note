@@ -28,13 +28,6 @@ final class TimestampPrinter implements AbstractPrinter {
 		return affected;
 	}
 
-	/**
-	 * LDAPエントリーを単純にダンプします。
-	 * 
-	 * @param node
-	 *            LDAPエントリー
-	 * @throws Exception
-	 */
 	private static void dump_attributes(SearchResult node) throws Exception {
 
 		if(node == null) {

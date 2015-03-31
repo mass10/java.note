@@ -35,14 +35,6 @@ final class Util {
 		}
 	}
 
-	/**
-	 * 不明なオブジェクトの文字列化を図ります。
-	 * 
-	 * @param unknown
-	 *            オブジェクト
-	 * @return オブジェクトの文字列表現
-	 * @throws Exception
-	 */
 	public static final String to_string(Object unknown) throws Exception {
 
 		if (unknown == null)
@@ -77,12 +69,6 @@ final class Util {
 		return buffer.toString();
 	}
 
-	/**
-	 * 不明な文字列を日付に変換
-	 * 
-	 * @param s
-	 * @return
-	 */
 	public static final String read_time_format(String s) {
 
 		final Date date = to_date(s);
@@ -218,12 +204,6 @@ final class Util {
 		return "modifyTimestamp".equalsIgnoreCase(id) || "createTimestamp".equalsIgnoreCase(id);
 	}
 
-	/**
-	 * TIMEZONE の変換
-	 * 
-	 * @param date
-	 * @return
-	 */
 	private static final Date utc_to_jst(Date date) {
 
 		if (date == null)
@@ -235,13 +215,6 @@ final class Util {
 		return jst_calendar.getTime();
 	}
 
-	/**
-	 * ノード属性の説明文を返します。現在サポートされていません。
-	 * 
-	 * @deprecated
-	 * @param attribute
-	 * @return
-	 */
 	@Deprecated
 	public static final String describe_node_attribute(Attribute attribute) {
 
@@ -254,13 +227,6 @@ final class Util {
 		}
 	}
 
-	/**
-	 * 不明なオブジェクトの文字列表現を得ます。
-	 * 
-	 * @param attribute
-	 * @return
-	 * @throws Exception
-	 */
 	public static final String to_string(Attribute attribute) throws Exception {
 
 		if (attribute == null)
@@ -328,14 +294,6 @@ final class Util {
 		return to_string(d);
 	}
 
-	/**
-	 * LDAP ノードから属性を取り出します。
-	 * 
-	 * @param e
-	 * @param name
-	 * @return
-	 * @throws Exception
-	 */
 	public static final Object get_attribute(SearchResult e, String name) throws Exception {
 
 		return e.getAttributes().get(name);

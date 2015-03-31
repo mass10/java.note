@@ -3,9 +3,6 @@ package jp.tokyo.mass10.java.ldap.openldap.sample1;
 import java.io.FileInputStream;
 import java.util.Properties;
 
-/**
- * コンフィギュレーションファイルへアクセスを提供します。
- */
 final class ConfigurationSettings {
 
 	private final Properties _core = new Properties();
