@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment></comment>
+	<entry key="ldap.settings.driver">com.sun.jndi.ldap.LdapCtxFactory</entry>
+	<entry key="ldap.settings.url">ldap://127.0.0.1:389</entry>
+	<entry key="ldap.settings.security_principal"></entry>
+	<entry key="ldap.settings.security_credentials"></entry>
+	<entry key="ldap.settings.security_authentication">simple</entry>
+	<entry key="ldap.search.base">ou=ABC,dc=DEF</entry>
+	<entry key="ldap.search.filter_string">uid=*</entry>
+	<entry key="ldap.search.printer">FullPrinter</entry>
+</properties>
+
+
+
+
